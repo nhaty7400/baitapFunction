@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>baitapjsbuoi5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- BÀI 1 QUẢN LÝ TUYỂN SINH -->
+    <div class="container">
+        <h1 class="text-success mb-5 mt-5">Bài 1: Quản lý tuyển sinh</h1>
+        <form class="w-50 py-50">
+            <div class="row">
+                <div class="form-group col-4">
+                    <input type="number" class="form-control" id="diemChuan-b1" placeholder="Điểm chuẩn">
+                </div>
+                <div class="dropdown col-4">
+                    <button class="btn dropdown-toggle border-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Chọn khu vực
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="X" href="#">X</a>
+                        <a class="dropdown-item" id="A" href="#">A</a>
+                        <a class="dropdown-item" id="B" href="#">B</a>
+                        <a class="dropdown-item" id="C" href="#">C</a>
+                    </div>
+                </div>
+                <div class="dropdown col-4">
+                    <button class="btn dropdown-toggle border-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Chọn đối tượng
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="0" href="#">0</a>
+                        <a class="dropdown-item" id="1" href="#">1</a>
+                        <a class="dropdown-item" id="2" href="#">2</a>
+                        <a class="dropdown-item" id="3" href="#">3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-4">
+                    <input type="number" class="form-control" id="diem1-b1" placeholder="Điểm môn thứ 1">
+                </div>
+                <div class="form-group col-4">
+                    <input type="number" class="form-control" id="diem2-b1" placeholder="Điểm môn thứ 2">
+                </div>
+                <div class="form-group col-4">
+                    <input type="number" class="form-control" id="diem3-b1" placeholder="Điểm môn thứ 3">
+                </div>
+            </div>
+
+
+            <button type="button" class="btn btn-primary" id="btnCalc-b1">Kết quả</button>
+            <p class="bg-success" id="result-b1"></p>
+        </form>
+    </div>
+    
+    
+    <!-- BÀI 2 TÌNH TIỀN ĐIỆN -->
+
+    <div class="container">
+        <h1 class="text-primary mb-5 mt-5">Bài 2: Tính tiền điện</h1>
+        <form class="w-50 py-50">
+            <div class="row">
+                <div class="form-group col-lg-6">
+                    <input type="text" class="form-control" id="hoTen-b2" placeholder="Nhập họ tên">
+                </div>
+                <div class="form-group col-lg-4">
+                    <input type="number" class="form-control" id="soKw-b2" placeholder="Nhập số kw">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="btnCalc-b2">Tính tiền điện</button>
+            <p class="bg-primary mt-3" id="result-b2"></p>
+        </form>    
+    </div>
+    
+    
+    <!-- BÀI 3 TÍNH THUẾ THU NHẬP CÁ NHÂN -->
+
+    <div class="container">
+        <h1 class="text-danger mb-5 mt-5">Bài 3: Tính thuế thu nhập cá nhân</h1>
+        <form>
+            <div class="row">
+                <div class="form-group col-3">
+                    <input type="text" class="form-control" id="hoTen-b3" placeholder="Nhập họ tên">
+                </div>
+                <div class="form-group col-3">
+                    <input type="number" class="form-control" id="thuNhap-b3" placeholder="Tổng thu nhập năm">
+                </div>
+                <div class="form-group col-3">
+                    <input type="number" class="form-control" id="soNguoi-b3" placeholder="Số người phụ thuộc">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="btnCalc-b3">Tính tiền thuế</button>
+            <p class="bg-danger mt-3" id="result-b3"></p>
+        </form>
+    </div>
+
+
+    <!-- BÀI 4 TÍNH TIỀN CÁP -->
+
+    <div class="container">
+        <h1 class="text-info mb-5 mt-5">Bài 4: Tính tiền cáp</h1>
+        <form class="">
+            <div class="row">
+                <div class="dropdown col-3">
+                    <button class="btn dropdown-toggle border-secondary" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Chọn loại khách hàng
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="nhaDan" href="#">Nhà Dân</a>
+                        <a class="dropdown-item" id="business" href="#">Doanh Nghiệp</a>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    <input type="text" class="form-control" id="maKH-b4" placeholder="Nhập mã khách hàng">
+                </div>
+                <div class="form-group col-3">
+                    <input type="number" class="form-control" id="soKenh-b4" placeholder="Số kênh cao cấp">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-3">
+                    <input style="display: none;" type="number" class="form-control" id="soKetNoi-b4" placeholder="Số kết nối">
+                </div>
+            </div>
+            <button  type="button" class="btn btn-primary" id="btnCalc-b4">Tính tiền cáp</button>
+            <p class="bg-info" id="result-b4"></p>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./js/bai1.js"></script>
+    <script src="./js/bai2.js"></script>
+    <script src="./js/bai3.js"></script>
+    <script src="./js/bai4.js"></script>
+</body>
+
+</html>
