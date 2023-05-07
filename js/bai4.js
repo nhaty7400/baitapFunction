@@ -27,8 +27,8 @@ const DN_KENH_CC = 50;
 
 
 function main() {
+    
     var loaiKH = getELE("loaiKh-b4").value;
-    getELE("loaiKh-b4").onchange = AnHienSoKetNoi(loaiKH);
     var maKH = getELE("maKH-b4").value;
     var soKenhCC = getELE("soKenhCC-b4").value;
     var total = 0;
@@ -41,19 +41,20 @@ function main() {
         case "doanhNghiep":
             total = DN_XL_HD + CalcSoKetNoiDN(soKetNoi, DN_DV_CB_10_KN_DAU, DN_DV_CB_MOI_KN_TREN_10) + DN_KENH_CC * soKenhCC;
             break;
-    }
+    };
 
-    getELE("result-b4").innerHTML = "Mã khách hàng: " + maKH + "; Tiền cáp: " + total.toLocaleString() + "$";
-}
+    getELE("result-b4").innerHTML = "Mã khách hàng: " + maKH + "; Tiền cáp: " + new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(total);
+};
 getELE("btnCalc-b4").onclick = main;
 
 
 
 function getELE(id) {
     return document.getElementById(id);
-}
+};
 
-function AnHienSoKetNoi(loaiKH) {
+function AnHienSoKetNoi() {
+    var loaiKH = getELE("loaiKh-b4").value;
     switch (loaiKH) {
         case "doanhNghiep":
             getELE("soKetNoi-b4").style.display = "block";
