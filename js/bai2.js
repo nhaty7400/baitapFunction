@@ -35,13 +35,13 @@ function getELE(id) {
 }
 
 function CalcKw(kw, KW_50_DAU, KW_50_100, KW_100_200, KW_200_350, KW_TREN_350) {
-    if (kw < 50 && kw > 0) {
+    if (kw <= 50 && kw > 0) {
         return kw * KW_50_DAU;
-    } else if (kw > 50 && kw < 100) {
+    } else if (kw > 50 && kw <= 100) {
         return 25000 + (kw - 50) * KW_50_100;
-    } else if (kw > 100 && kw < 200) {
+    } else if (kw > 100 && kw <= 200) {
         return 25000 + 32500 + (kw - 100) * KW_100_200;
-    } else if (kw > 200 && kw < 350) {
+    } else if (kw > 200 && kw <= 350) {
         return 25000 + 32500 + 85000 + (kw - 200) * KW_200_350;
     } else if (kw > 350) {
         return 25000 + 32500 + 85000 + 165000 + (kw - 350) * KW_TREN_350;

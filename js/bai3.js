@@ -48,20 +48,20 @@ function CalcThue(tn, soNguoi, TN_DUOI_60, TN_60_120, TN_120_210, TN_210_384, TN
     }
     tn = tn - (4e+6) - soNguoi * (1.6e+6);
 
-    if (tn > 0 && tn < 6e+7) {
+    if (tn > 0 && tn <= 6e+7) {
         return tn * TN_DUOI_60;
-    } else if (tn > 6e+7 && tn < 12e+7) {
+    } else if (tn > 6e+7 && tn <= 12e+7) {
         return (3e+6) + (tn - (6e+7)) * TN_60_120;
-    } else if (tn > 12e+7 && tn < 21e+7) {
+    } else if (tn > 12e+7 && tn <= 21e+7) {
         return (3e+6) + (6e+6) + (tn - (12e+7)) * TN_120_210;
-    } else if (tn > 21e+7 && tn < 384e+6) {
+    } else if (tn > 21e+7 && tn <= 384e+6) {
         return (3e+6) + (6e+6) + (135e+5) + (tn - (21e+7)) * TN_210_384;
-    } else if (tn > 384e+6 && tn < 624e+6) {
-        return (3e+6) + (6e+6) + (135e+5) + (384e+5) + (tn - (384e+6)) * TN_384_624;
-    } else if (tn > 624e+6 && tn < 96e+7) {
-        return (3e+6) + (6e+6) + (135e+5) + (384e+5) + (6e+7) + (tn - (624e+6)) * TN_624_960;
+    } else if (tn > 384e+6 && tn <= 624e+6) {
+        return (3e+6) + (6e+6) + (135e+5) + (348e+5) + (tn - (384e+6)) * TN_384_624;
+    } else if (tn > 624e+6 && tn <= 96e+7) {
+        return (3e+6) + (6e+6) + (135e+5) + (348e+5) + (6e+7) + (tn - (624e+6)) * TN_624_960;
     } else if (tn > 96e+7) {
-        return (3e+6) + (6e+6) + (135e+5) + (384e+5) + (6e+7) + (1008e+5) + (tn - (96e+7)) * TN_TREN_960;
+        return (3e+6) + (6e+6) + (135e+5) + (348e+5) + (6e+7) + (1008e+5) + (tn - (96e+7)) * TN_TREN_960;
     } else {
         alert("Bạn nhập sai số tiền thu nhập");
         return 0;
